@@ -4,15 +4,19 @@
 # SPDX-License-Identifer: Apache-2.0
 #
 
+# Inherit from the common Open Source product configuration (sdm710-common)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/havoc/config/common.mk)
 
 # Inherit from RMX1901 device.
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := RMX1901
-PRODUCT_NAME := lineage_RMX1901
+PRODUCT_NAME := havoc_RMX1901
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := Realme X
 PRODUCT_MANUFACTURER := Realme
